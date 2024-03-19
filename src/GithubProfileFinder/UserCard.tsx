@@ -3,9 +3,10 @@
 export default function User({user}: {user: any}) {
     const {login, avatar_url} = user;
     console.log(user);
-    if(user.message === "https://docs.github.com/rest/overview/resources-in-the-rest-api#rate-limiting")
+    if(user.documentation_url
+        === "https://docs.github.com/rest/overview/resources-in-the-rest-api#rate-limiting")
     {
-        return <h1>Rate Limit Exceeded</h1>
+        return <h1>Api Please try after some time Rate Limit Exceeded</h1>
     }
     if (user.message === "Not Found") {
         return null;
